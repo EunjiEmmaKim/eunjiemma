@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+	<title>Table of contents</title>
+	<style>
+
+	p{
+		text-indent:10px;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+	a:link{
+		color:black;
+	}
+
+	a:visited{
+		color:black;
+	}
+
+	a:hover{
+		color:#364659;
+	}
+
+	a:active{
+		color:#EA5545;
+	}
+
+	body{
+		background-color: #F2F2F2;
+	}
+
+	header {
+		color: white;
+		border:2px solid #D98282;
+		border-radius: 10px;
+		margin: 0 1.5%;
+		margin-top:20px;
+		padding:1%;
+		background-color:#D98282;
+		font-size:13px;
+		font-family: 'Lobster', cursive;
+	}
+
+	section {
+		font-size: 14px;
+		border:2px solid #97A6A3;
+		border-radius: 10px;
+	  	float: left;
+	 	margin: 1.4% 1.5%;
+	  	width: 63%;
+	  	padding:1%;
+	  	background-color:#97A6A3;
+	  	font-family: 'Sanchez', serif;
+	}
+
+	nav {
+		font-size: 14px;
+		border:2px solid #F2994B;
+		border-radius: 10px;
+	 	float: right;
+	 	position:fixed;
+	 	top:22%;
+	 	left:65%;
+	  	margin: 0 2.3%;
+	  	width: 29%;
+	  	padding-left:10px;
+	  	padding-top:5px;
+	  	padding-bottom:5px;
+	  	background-color:#F2994B;
+	  	font-family: 'Nunito', sans-serif;
+	}
+
+	footer{
+		border:2px solid #364659;
+		background-color: #364659;
+		border-radius: 5px;
+		color:white;
+		width:auto;
+		text-align: center; 
+		clear:both;
+		padding:1%;
+		margin: 1.4% 1.5%;
+		font-family: 'Nunito', sans-serif;
+	}
+
+	img{
+		float:left;
+		oveflow:auto;
+	}
+	</style>
+</head>
+<body>
+	<header>
+		<h1 id="title">Eunji Kim's&nbsp; Week 1 &nbsp;Exercise</h1>	
+	</header>
+	<!-- Navagation bar Starts-->
+	<nav>
+		<!--Internal link -->
+		<a href="#bottom"><center><strong>Go To BOTTOM</strong></center></a><br>
+		<!--Navigation bar-->
+		<h1>&nbsp;&nbsp;&nbsp;<em>Table of contents</em></h1>
+		<ol>
+			<a href="#no1"><li>Introduction to links and anchors</li></a>
+			<ul type="none">
+				<a href="#no11"><li>1.1 Visiting a linked resource</li></a>
+				<a href="#no12"><li>1.2 Other link relationships</li></a>
+				<a href="#no13"><li>1.3 Specifying anchors and links</li></a>
+				<a href="#no14"><li>1.4 Link titles</li></a>
+				<a href="#no15"><li>1.5 Internationalization and links</li></a>
+			</ul>
+			<a href="#no2"><li>The A element</li></a>
+			<ul type="none">
+				<a href="#no21"><li>2.1 Syntax of anchor names</li></a>
+				<a href="#no22"><li>2.2 Nested links are illegal</li></a>
+				<a href="#no23"><li>2.3 Anchors with the id attribute</li></a>
+				<a href="#no24"><li>2.4 Unavailable and unidentifiable resources</li></a>
+			</ul>
+			<a href="#no3"><li>Document relationships: the LINK element</li></a>
+			<ul type="none">
+				<a href="#no31"><li>3.1 Forward and reverse links</li></a>
+				<a href="#no32"><li>3.2 Links and external style sheets</li></a>
+				<a href="#no33"><li>3.3 Links and search engines</li></a>
+			</ul>
+			<a href="#no4"><li>Path information: the BASE element</li></a>
+			<ul type="none">
+				<a href="#no41"><li>4.1 esolving relative URIs</li></a>
+			</ul>
+		</ol>
+		<br>	
+		<a href="#"><center><strong>Go To TOP</strong><center></a>
+	</nav>
+	<!-- Navagation bar Ends -->
+	<!-- Section(contents) Starts -->
+	<section>
+		<br>
+		<a href="#"><img src="http://learn.shayhowe.com/assets/images/book/book-sm.png" alt="html book"/></a>
+		<h3 id="no1">1. Introduction to links and anchors</h3>
+		<p>HTML offers many of the conventional publishing idioms for rich text and structured documents, but what separates it from most other markup languages is its features for hypertext and interactive documents. This section introduces the link (or hyperlink, or Web link), the basic hypertext construct. A link is a connection from one Web resource to another. Although a simple concept, the link has been one of the primary forces driving the success of the Web.<br>
+		A link has two ends -- called anchors -- and a direction. The link starts at the "source" anchor and points to the "destination" anchor, which may be any Web resource (e.g., an image, a video clip, a sound bite, a program, an HTML document, an element within an HTML document, etc.).</p>
+		<br>
+		<h4 id="no11">1.1 Visiting a linked resource</h4>
+		<p>The default behavior associated with a link is the retrieval of another Web resource. This behavior is commonly and implicitly obtained by selecting the link (e.g., by clicking, through keyboard input, etc.). The following HTML excerpt contains two links, one whose destination anchor is an HTML document named "chapter2.html" and the other whose destination anchor is a GIF image in the file "forest.gif":</p>
+
+		<h4 id="no12">1.2 Other link relationships</h4>
+		<p>By far the most common use of a link is to retrieve another Web resource, as illustrated in the previous examples. However, authors may insert links in their documents that express other relationships between resources than simply "activate this link to visit that related resource". Links that express other types of relationships have one or more link types specified in their source anchor.</p>
+		<p>The roles of a link defined by A or LINK are specified via the rel and rev attributes. For instance, links defined by the LINK element may describe the position of a document within a series of documents. In the following excerpt, links within the document entitled "Chapter 5" point to the previous and next chapters:</p>
+
+		<h4 id="no13">1.3 Specifying anchors and links</h4>
+		<p>Although several HTML elements and attributes create links to other resources (e.g., the IMG element, the FORM element, etc.), this chapter discusses links and anchors created by the LINK and A elements. The LINK element may only appear in the head of a document. The A element may only appear in the body.</p>
+		<p>When the A element's href attribute is set, the element defines a source anchor for a link that may be activated by the user to retrieve a Web resource. The source anchor is the location of the A instance and the destination anchor is the Web resource.</p>
+		<p>The retrieved resource may be handled by the user agent in several ways: by opening a new HTML document in the same user agent window, opening a new HTML document in a different window, starting a new program to handle the resource, etc. Since the A element has content (text, images, etc.), user agents may render this content in such a way as to indicate the presence of a link (e.g., by underlining the content).</p>
+		<p>When the name or id attributes of the A element are set, the element defines an anchor that may be the destination of other links. Authors may set the name and href attributes simultaneously in the same A instance.</p>
+		<p>The LINK element defines a relationship between the current document and another resource. Although LINK has no content, the relationships it defines may be rendered by some user agents.</p>
+
+		<h4 id="no14">1.4 Link titles</h4>
+		<p>The title attribute may be set for both A and LINK to add information about the nature of a link. This information may be spoken by a user agent, rendered as a tool tip, cause a change in cursor image, etc. Thus, we may augment a previous example by supplying a title for each link:</p>
+
+		<h4 id="no15">1.5 Internationalization and links</h4>
+		<p>Since links may point to documents encoded with different character encodings, the A and LINK elements support the charset attribute. This attribute allows authors to advise user agents about the encoding of data at the other end of the link.</p>
+		<p>The hreflang attribute provides user agents with information about the language of a resource at the end of a link, just as the lang attribute provides information about the language of an element's content or attribute values. Armed with this additional knowledge, user agents should be able to avoid presenting "garbage" to the user. Instead, they may either locate resources necessary for the correct presentation of the document or, if they cannot locate the resources, they should at least warn the user that the document will be unreadable and explain the cause.</p>
+
+		<h3 id="no2">2. The A element</h3>
+		Start tag: required, End tag: required<br>
+		Attribute definitions<br>
+		name = cdata [CS]<br>
+		This attribute names the current anchor so that it may be the destination of another link. The value of this attribute must be a unique anchor name. The scope of this name is the current document. Note that this attribute shares the same name space as the id attribute.<br>
+		href = uri [CT]<br>
+		This attribute specifies the location of a Web resource, thus defining a link between the current element (the source anchor) and the destination anchor defined by this attribute.<br>
+		hreflang = langcode [CI]<br>
+		This attribute specifies the base language of the resource designated by href and may only be used when href is specified.<br>
+		type = content-type [CI]<br>
+		This attribute gives an advisory hint as to the content type of the content available at the link target address. It allows user agents to opt to use a fallback mechanism rather than fetch the content if they are advised that they will get content in a content type they do not support.<br>
+		Authors who use this attribute take responsibility to manage the risk that it may become inconsistent with the content available at the link target address.<br>
+		For the current list of registered content types, please consult [MIMETYPES].<br>
+		rel = link-types [CI]<br>
+		This attribute describes the relationship from the current document to the anchor specified by the href attribute. The value of this attribute is a space-separated list of link types.<br>
+		rev = link-types [CI]<br>
+		This attribute is used to describe a reverse link from the anchor specified by the href attribute to the current document. The value of this attribute is a space-separated list of link types.<br>
+		charset = charset [CI]<br>
+		This attribute specifies the character encoding of the resource designated by the link. Please consult the section on character encodings for more details.<br>
+		Attributes defined elsewhere<br><br>
+
+		id, class (document-wide identifiers)<br>
+		lang (language information), dir (text direction)<br>
+		title (element title)<br>
+		style (inline style information )<br>
+		shape and coords (image maps)<br>
+		onfocus, onblur, onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup (intrinsic events )<br>
+		target (target frame information)<br>
+		tabindex (tabbing navigation)<br>
+		accesskey (access keys)<br>
+		Each A element defines an anchor<br><br>
+
+		The A element's content defines the position of the anchor.<br>
+		The name attribute names the anchor so that it may be the destination of zero or more links (see also anchors with id).<br>
+		The href attribute makes this anchor the source anchor of exactly one link.<br>
+		Authors may also create an A element that specifies no anchors, i.e., that doesn't specify href, name, or id. Values for these attributes may be set at a later time through scripts.<br><br>
+
+		In the example that follows, the A element defines a link. The source anchor is the text "W3C Web site" and the destination anchor is "http://www.w3.org/":<br><br>
+
+		Having defined the anchor, we may link to it from the same or another document. URIs that designate anchors contain a "#" character followed by the anchor name (the fragment identifier). Here are some examples of such URIs:<br><br>
+
+		An absolute URI: http://www.mycompany.com/one.html#anchor-one<br>
+		A relative URI: ./one.html#anchor-one or one.html#anchor-one<br>
+		When the link is defined in the same document: #anchor-one<br>
+		Thus, a link defined in the file "two.html" in the same directory as "one.html" would refer to the anchor as follows:<br><br>
+
+		Note. User agents should be able to find anchors created by empty A elements, but some fail to do so. For example, some user agents may not find the "empty-anchor" in the following HTML fragment:<br><br>
+
+		<h4 id="no21">2.1 Syntax of anchor names</h4>
+		<p>An anchor name is the value of either the name or id attribute when used in the context of anchors. Anchor names must observe the following rules:<br><br>
+
+		Uniqueness: Anchor names must be unique within a document. Anchor names that differ only in case may not appear in the same document.<br>
+		String matching: Comparisons between fragment identifiers and anchor names must be done by exact (case-sensitive) match.<br>
+		Thus, the following example is correct with respect to string matching and must be considered a match by user agents:<br></p>
+
+		<h4 id="no22">2.2 Nested links are illegal</h4>
+		<p>Links and anchors defined by the A element must not be nested; an A element must not contain any other A elements.<br>
+		Since the DTD defines the LINK element to be empty, LINK elements may not be nested either.<br>
+
+		<h4 id="no23">2.3 Anchors with the id attribute</h4>
+		<p>The id attribute may be used to create an anchor at the start tag of any element (including the A element).<br>This example illustrates the use of the id attribute to position an anchor in an H2 element. The anchor is linked to via the A element.<br><br>
+
+		<h4 id="no24">2.4 Unavailable and unidentifiable resources</h4>
+		<p>A reference to an unavailable or unidentifiable resource is an error. Although user agents may vary in how they handle such an error, we recommend the following behavior:<br><br></p>
+
+		<p>If a user agent cannot locate a linked resource, it should alert the user.<br>
+		If a user agent cannot identify the type of a linked resource, it should still attempt to process it. It should alert the user and may allow the user to intervene and identify the document type.<br></p>
+
+		<h3 id="no3">3. Document relationships: the LINK element</h3>
+
+		Start tag: required, End tag: forbidden<br>
+		Attributes defined elsewhere<br>
+		id, class (document-wide identifiers)<br>
+		lang (language information), dir (text direction)<br>
+		title (element title)<br>
+		style (inline style information )<br>
+		onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup (intrinsic events )<br>
+		href, hreflang, type, rel, rev (links and anchors)<br>
+		target (target frame information)<br>
+		media (header style information)<br>
+		charset(character encodings)<br>
+		This element defines a link. Unlike A, it may only appear in the HEAD section of a document, although it may appear any number of times. Although LINK has no content, it conveys relationship information that may be rendered by user agents in a variety of ways (e.g., a tool-bar with a drop-down menu of links).
+		<p>This example illustrates how several LINK definitions may appear in the HEAD section of a document. The current document is "Chapter2.html". The rel attribute specifies the relationship of the linked document with the current document. The values "Index", "Next", and "Prev" are explained in the section on link types.<br></p>
+
+		<h4 id="no31">3.1 Forward and reverse links</h4>
+		
+		The rel and rev attributes play complementary roles -- the rel attribute specifies a forward link and the rev attribute specifies a reverse link.<br><br>
+
+		Consider two documents A and B.<br><br>
+		Document A:Has exactly the same meaning as:<br>
+		Document B:Both attributes may be specified simultaneously.<br><br></p>
+
+		<h4 id="no32">3.2 Links and external style sheets</h4>
+		<p>When the LINK element links an external style sheet to a document, the type attribute specifies the style sheet language and the media attribute specifies the intended rendering medium or media. User agents may save time by retrieving from the network only those style sheets that apply to the current device.<br><br>
+		Media types are further discussed in the section on style sheets.<br></p>
+
+		<h4 id="no33">3.3 Links and search engines</h4>
+		<p>Authors may use the LINK element to provide a variety of information to search engines, including:<br>
+		Links to alternate versions of a document, written in another human language.<br>
+		Links to alternate versions of a document, designed for different media, for instance a version especially suited for printing.<br>
+		Links to the starting page of a collection of documents.<br>
+		The examples below illustrate how language information, media types, and link types may be combined to improve document handling by search engines.<br><br>
+		In the following example, we use the hreflang attribute to tell search engines where to find Dutch, Portuguese, and Arabic versions of a document. Note the use of the charset attribute for the Arabic manual. Note also the use of the lang attribute to indicate that the value of the title attribute for the LINK element designating the French manual is in French.<br><br></p>
+
+		<h3 id="no4">4. Path information: the BASE element</h3>
+
+		Start tag: required, End tag: forbidden<br>
+		Attribute definitions<br>
+		href = uri [CT]<br>
+		This attribute specifies an absolute URI that acts as the base URI for resolving relative URIs.<br>
+		Attributes defined elsewhere<br><br>
+
+		target (target frame information)<br>
+		In HTML, links and references to external images, applets, form-processing programs, style sheets, etc. are always specified by a URI. Relative URIs are resolved according to a base URI, which may come from a variety of sources. The BASE element allows authors to specify a document's base URI explicitly.<br><br>
+
+		When present, the BASE element must appear in the HEAD section of an HTML document, before any element that refers to an external source. The path information specified by the BASE element only affects URIs in the document where the element appears.<br><br>
+
+		For example, given the following BASE declaration and A declaration:<br>
+
+		<h4 id="no41">4.1 Resolving relative URIs</h4>
+		<p>User agents must calculate the base URI for resolving relative URIs according to [RFC1808], section 3. The following describes how [RFC1808] applies specifically to HTML.<br>
+		User agents must calculate the base URI according to the following precedences (highest priority to lowest):<br>The base URI is set by the BASE element.<br>
+		The base URI is given by meta data discovered during a protocol interaction, such as an HTTP header (see [RFC2616]).<br>
+		By default, the base URI is that of the current document. Not all HTML documents have a base URI (e.g., a valid HTML document may appear in an email and may not be designated by a URI). Such HTML documents are considered erroneous if they contain relative URIs and rely on a default base URI.<br>
+		Additionally, the OBJECT and APPLET elements define attributes that take precedence over the value set by the BASE element. Please consult the definitions of these elements for more information about URI issues specific to them.
+		<br></p>
+		<span id="bottom"></span>
+	</section>
+	<!-- Section(contents) Ends -->
+
+	<footer class="footer">
+		<small>Copyright &copy;<a href="mailto:eunjieunji007@gmail.com" style="color:white;">Eunji Kim</a></small>
+	</footer>
+
+</body>
+</html>
+
+
