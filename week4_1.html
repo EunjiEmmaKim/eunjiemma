@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eunji Form</title>
+	<link rel="stylesheet" href="assets/stylesheets/main.css">
+  	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<style>
+	*,
+	*:before,
+	*:after {
+	   box-sizing: border-box;
+	}
+	/*
+	========================================
+	 Basic : background image, font
+	========================================
+	*/
+	body {
+	   padding-bottom:50px;
+	   color: #232323;;
+	   font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;	   
+	   background-image: url("http://www.resimsi.com/wp-content/uploads/2015/06/yellow-background2.jpg")	
+	}
+
+	form {
+	  border: 1px solid #CD9B1D;
+	  border-radius: 5px;
+	  overflow: hidden;
+	  width: 600px;
+	  margin: 0 auto;
+	}
+
+	fieldset {
+	  border: 0;
+	  margin: 0;
+	  padding: 0;
+	}
+
+	input {
+	  border-radius: 5px;
+	  margin: 0;
+	}
+
+	h1 {
+		text-align: center;
+	}
+	/*
+	========================================
+	 User information area
+	========================================
+	*/
+	.account-info{
+	  padding: 20px 20px 0 20px;
+	  background: #fff;
+	}
+
+	.account-info label, h1{
+	  color: #232323;;
+	  display: block;
+	  font-weight: bold;
+	  margin-bottom: 20px;
+	}
+
+	.account-info input {
+	  background: #fff;
+	  border: 1px solid #FFC125;
+	  -webkit-box-shadow: 7px 9px 9px -3px rgba(189,189,189,0.6);
+	  -moz-box-shadow: 7px 9px 9px -3px rgba(189,189,189,0.6);
+      box-shadow: 7px 9px 9px -3px rgba(189,189,189,0.6);
+	  color: #232323;;
+	  padding: 6px;
+	  margin-top: 6px;
+	  width: 100%;
+	}
+
+	/*
+	========================================
+	 User detail
+	========================================
+	*/
+
+	.account-detail label{
+	  padding: 0px 20px 20px 20px;
+	  background: #fff;
+	  color: #232323;;
+	  font-weight: bold;
+	  display: block;
+	}
+
+	select{
+		display: inline;
+	}
+
+	/*
+	========================================
+	 Submit action area
+	========================================
+	*/
+
+	.account-action {
+	  background: #f0f0f2;
+	  border-top: 1px solid #c6c7cc;
+	  padding: 20px;
+	  margin: 0 auto; 
+   	  text-align: right;
+      width: inherit;
+	}
+
+	.account-action label {
+	  color: #7c7c80;
+	  font-size: 12px;
+	  display:inline;
+	}
+
+	/*
+	========================================
+	 Submit/Reset button 
+	========================================
+	*/
+	.account-action .btn {
+	  background: linear-gradient(#FFEC8B, #CD8500);
+	  border: 0;
+	  color: #fff;
+	  cursor: pointer;
+	  font-weight: bold;
+	  padding: 8px 16px;
+	  margin: 0px 5px 0px 5px;
+	}
+
+
+
+	</style>
+</head>
+<body>
+	<h1>Sign Up</h1>
+
+	<!-- User information : id, username, password, email, birthday-->
+
+	<form action="#" method="get">	  
+	  <fieldset class="account-info">	 	
+	  	<label for="id">
+	      <i class="fa fa-arrow-circle-right"></i> * ID 
+	      <input type="text" name="id" placeholder="(Example : eunjiemmakim)" required>
+	    </label>
+	    <label for="username">
+	      <i class="fa fa-arrow-circle-o-right"></i> * User name
+	      <input type="text" name="username" placeholder="(Example : Eunji Kim)"required>
+	    </label>
+	    <label for="password">
+	      <i class="fa fa-heart"></i> * Password
+	      <input type="password" name="password" placeholder="(Example : More 5 numbers and at least 1 character)" required>
+	    </label>
+	    <label for="email">
+	      <i class="fa fa-envelope-square"></i> * Email
+	      <input type="email" name="email" placeholder="(Example : eunjieunji007@gmail.com)" required>
+	    </label>
+	     <label for="birthday">
+	      <i class="fa fa-birthday-cake"></i> Birthday
+	      <input type="date" name="birthday">
+	    </label>
+	  </fieldset>
+
+	  <!-- User Detail : gender, interest, country, sns, profile picture -->
+	
+	  <fieldset class="account-detail">
+	  	<label for="gender">
+	  		<i class="fa fa-dot-circle-o"></i> Gender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    <input type="radio" name="gender" value="Female" checked> Female&nbsp;&nbsp;
+			<input type="radio" name="gender" value="Male"> Male
+		</label>
+		<label for="interest">
+			<i class="fa fa-check-square"></i> Interest &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="checkbox" name="interest" value="Movies" checked> Movies &nbsp;
+			<input type="checkbox" name="interest" value="Music"> Music &nbsp;
+			<input type="checkbox" name="interest" value="Sports"> Sports &nbsp;
+			<input type="checkbox" name="interest" value="Design"> Design &nbsp;
+			<input type="checkbox" name="interest" value="Cars"> Cars &nbsp;
+			<input type="checkbox" name="interest" value="Games"> Games &nbsp;
+		</label>
+		<label for="country">
+			<i class="fa fa-globe"></i> Country &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<select name="country">
+			  <option value="Korea" selected>Korea</option>
+			  <option value="New Zealand">New Zealand</option>
+			  <option value="China">China</option>
+			  <option value="The UK">The UK</option>
+			  <option value="USA">U.S.A</option>
+			  <option value="austrailia">Austrailia</option>
+			</select>
+		</label>
+		<label for="sns">
+			<i class="fa fa-facebook"></i> SNS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<select name="sns" multiple>
+			  <option value="Facebook">Facebook</option>
+			  <option value="Instagram">Instagram</option>
+			  <option value="Twitter">Twitter</option>
+			  <option value="Tumblr">Tumblr</option>
+			</select>
+		</label>
+		<label for="picture">
+			<i class="fa fa-file-image-o"></i> Profile picture &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="file" name="picture">
+	  </fieldset>
+
+
+	<!-- Sumbit/Reset Button-->
+	
+	  <fieldset class="account-action">
+	  	  <input type="hidden" name="signup" value="signup-1">
+		  <label for="submit">
+		    <input class="btn" type="submit" name="submit" value="Submit">
+		  </label>
+		  <label for="reset">
+		    <input class="btn" type="reset" name="reset" value="Reset">
+		  </label>
+	  </fieldset>
+	</form>
+</body>
+</html>
