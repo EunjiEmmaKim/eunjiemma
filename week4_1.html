@@ -92,6 +92,16 @@
 		display: inline;
 	}
 
+	.margin{
+		position:relative;
+		left:50px;
+		display:inline-block;
+	}
+
+	.sns-margin{
+		margin-right:35px;
+	}
+
 	/*
 	========================================
 	 Submit action area
@@ -130,6 +140,8 @@
 
 
 
+
+
 	</style>
 </head>
 <body>
@@ -165,42 +177,52 @@
 	
 	  <fieldset class="account-detail">
 	  	<label for="gender">
-	  		<i class="fa fa-dot-circle-o"></i> Gender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		    <input type="radio" name="gender" value="Female" checked> Female&nbsp;&nbsp;
-			<input type="radio" name="gender" value="Male"> Male
+	  		<i class="fa fa-dot-circle-o"></i> Gender
+	  		<div class="margin">
+			    <input type="radio" name="gender" value="Female" checked> Female&nbsp;&nbsp;
+				<input type="radio" name="gender" value="Male"> Male
+			</div>
 		</label>
 		<label for="interest">
-			<i class="fa fa-check-square"></i> Interest &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="checkbox" name="interest" value="Movies" checked> Movies &nbsp;
-			<input type="checkbox" name="interest" value="Music"> Music &nbsp;
-			<input type="checkbox" name="interest" value="Sports"> Sports &nbsp;
-			<input type="checkbox" name="interest" value="Design"> Design &nbsp;
-			<input type="checkbox" name="interest" value="Cars"> Cars &nbsp;
-			<input type="checkbox" name="interest" value="Games"> Games &nbsp;
+			<i class="fa fa-check-square"></i> Interest
+			<div class="margin">	
+				<input type="checkbox" name="interest" value="Movies" checked> Movies &nbsp;
+				<input type="checkbox" name="interest" value="Music"> Music &nbsp;
+				<input type="checkbox" name="interest" value="Sports"> Sports &nbsp;
+				<input type="checkbox" name="interest" value="Design"> Design &nbsp;
+				<input type="checkbox" name="interest" value="Cars"> Cars &nbsp;
+				<input type="checkbox" name="interest" value="Games"> Games 
+			</div>																		
 		</label>
 		<label for="country">
-			<i class="fa fa-globe"></i> Country &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<select name="country">
-			  <option value="Korea" selected>Korea</option>
-			  <option value="New Zealand">New Zealand</option>
-			  <option value="China">China</option>
-			  <option value="The UK">The UK</option>
-			  <option value="USA">U.S.A</option>
-			  <option value="austrailia">Austrailia</option>
-			</select>
+			<i class="fa fa-globe"></i> Country
+			<div class="margin">
+				<select name="country">
+				  <option value="Korea" selected>Korea</option>
+				  <option value="New Zealand">New Zealand</option>
+				  <option value="China">China</option>
+				  <option value="The UK">The UK</option>
+				  <option value="USA">U.S.A</option>
+				  <option value="austrailia">Austrailia</option>
+				</select>
+			</div>
 		</label>
 		<label for="sns">
-			<i class="fa fa-facebook"></i> SNS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<select name="sns" multiple>
-			  <option value="Facebook">Facebook</option>
-			  <option value="Instagram">Instagram</option>
-			  <option value="Twitter">Twitter</option>
-			  <option value="Tumblr">Tumblr</option>
-			</select>
+			<i class="fa fa-facebook"></i><span class="sns-margin"> SNS</span> 
+			<div class="margin">
+				<select name="sns" multiple>
+				  <option value="Facebook">Facebook</option>
+				  <option value="Instagram">Instagram</option>
+				  <option value="Twitter">Twitter</option>
+				  <option value="Tumblr">Tumblr</option>
+				</select>
+			</div>
 		</label>
 		<label for="picture">
-			<i class="fa fa-file-image-o"></i> Profile picture &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="file" name="picture">
+			<i class="fa fa-file-image-o"></i> Profile picture
+			<div class="margin">
+				<input type="file" name="picture">
+			</div>
 	  </fieldset>
 
 
