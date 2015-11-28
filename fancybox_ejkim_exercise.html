@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!--Link Google Font -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
+       <!-- Add fancyBox -->
+    <link rel="stylesheet" href="../fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="../fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+    <!-- Optionally add helpers - button, thumbnail and/or media -->
+    <link rel="stylesheet" href="../fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="../fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="../fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+    <link rel="stylesheet" href="../fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+    <script type="text/javascript" src="../fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+
+	<title>Bootstrap Webpage - Eunji</title>
+
+	<style>
+	/* font */
+	*{
+		font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;	
+	}
+
+	/* radio, checkbox */
+	.radio-inline, .checkbox-inline{
+		margin-left:20px;
+	}
+
+	/* container */
+	.container{
+		margin-top:20px;
+		margin-bottom:20px;
+		width:800px;
+		background-color:white;
+		border:1px solid white;
+		border-radius: 10px;
+		padding:20px;
+	}
+
+	/* form group input shadow*/
+	.form-group input{
+	  -webkit-box-shadow: 7px 7px 5px -3px rgba(189,189,189,0.6);
+	  -moz-box-shadow: 7px 7px 5px -3px rgba(189,189,189,0.6);
+      box-shadow: 7px 7px 5px -3px rgba(189,189,189,0.6);
+	}
+
+    /* btn */
+	.btn{
+		margin-left:10px;
+		margin-top:10px;
+		padding-left: 70px;
+		padding-right:70px;
+	}
+
+	.btn-group{
+		margin-left:40px;
+	}
+
+	/* navber */
+	.navbar-right{
+		color:white;
+		margin-top:15px;
+		margin-right:10px;
+		margin-left:10px;
+	}
+
+	/* a link */
+	a, a:link, a:visited{		
+		text-decoration: none;
+		color:white;
+	}
+	a:hover, a:active{
+		text-decoration: underline;
+		color:white;
+	}
+
+	.page-header{
+		margin:25px;
+	}
+
+	img{
+		width:200px;
+		height:auto;
+	}
+
+	.list-group-item{
+		text-align: center;
+	}
+
+	.bird_gal{
+		display: inline-block;
+		position : relative;
+		left : 300px;
+		
+	}
+
+	</style>
+</head>
+
+<body>
+  <script>
+		$(document).ready(function() {
+		$(".fancybox").fancybox({
+			openEffect	: 'none',
+			closeEffect	: 'none'
+		});
+	});
+  </script>
+  <!-- Navbar -->
+  <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+  <div class="container-fluid">    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">EMMA's Planet <span class="glyphicon glyphicon-star-empty"></span></a>
+    </div>
+    
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <!-- Button group -->		
+		<div class="btn-group btn-group-md" role="group" aria-label="true">
+		  <button type="button" class="btn btn-warning">Home</button>
+		  <div class="btn-group btn-group-md" role="group" aria-label="true">
+
+	    	  <!-- Dropdown -->	
+			  <button type="button" class="btn btn-success">About</button>
+			  <button type="button" class="btn btn-success dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			  <span class="caret"></span>
+			  </button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					<li class="dropdown-header">About Eunji Kim</li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">Profile</a></li>
+					<li><a href="#">Experience</a></li>
+					<li><a href="#">Qualification</a></li>
+					<li><a href="#">Education</a></li>
+					<li><a href="#">Skills</a></li> 
+					<li><a href="#">Interest</a></li> 
+				</ul>
+		  </div>
+		  <div class="btn-group btn-group-md" role="group" aria-label="true">
+			<button type="button" class="btn btn-info">Portfolio</button>
+			<button type="button" class="btn btn-danger" >Contact</button>
+			<button type="button" class="btn btn-primary">Follow me</button>
+		   </div>		  
+		</div>
+
+      <div class="nav navbar-nav navbar-right">
+         <a href="#" id="signup">Sign Up Here</a>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+  </nav><!-- /.nav -->
+	
+	<!-- Page Header -->
+	<div class="page-header">
+		<h1>Plz sign up to Emma's Planet <small><span class="glyphicon glyphicon-heart"></span></small></h1>
+	</div>
+
+	<!-- fancy box image gallery -->
+	<div class="bird_gal">
+		<h2>Fancy box Image Gallery </h2>
+		<a class="fancybox" rel="gallery1" href="https://farm5.staticflickr.com/4061/4675067764_e6ff3d073a_b.jpg" title="Ice Cream">
+		<img src="https://farm5.staticflickr.com/4061/4675067764_e6ff3d073a_b.jpg" alt="" class="img-thumbnail"/>
+		</a>
+		<a class="fancybox img-circle" rel="gallery1" href="https://farm2.staticflickr.com/1345/1165550492_5dc3dcc41b_z.jpg" title="Ice Cream">
+			<img src="https://farm2.staticflickr.com/1345/1165550492_5dc3dcc41b_z.jpg" alt="" class="img-thumbnail"/>
+		</a>
+		<a class="fancybox img-circle" rel="gallery1" href="https://farm8.staticflickr.com/7011/6767425473_144aef7d02_b.jpg" title="Ice Cream">
+			<img src="https://farm8.staticflickr.com/7011/6767425473_144aef7d02_b.jpg" alt="" class="img-thumbnail"/>
+		</a>
+		<a class="fancybox img-circle" rel="gallery1" href="https://farm8.staticflickr.com/7409/13118863904_905a9ddc18_b.jpg" title="Ice Cream">
+			<img src="https://farm8.staticflickr.com/7409/13118863904_905a9ddc18_b.jpg" alt="" class="img-thumbnail"/>
+		</a>
+	</div class="bird_gal">
+	<br><br>
+	<!-- Image -->
+	<center><img class="img-circle" src="http://cdn.playbuzz.com/cdn/0122fad9-7803-4bef-83bf-b4d6926a02f8/6ec327b7-b64c-437a-8004-93df0cbb242c.jpg" />
+	<h1> Sign Up</h1>
+	</center>
+
+	<div class="container">
+		<!-- Progress Bar -->
+		<div class="progress">
+			<div class="progress-bar progress-bar-striped active" role="progressbar"  aria-valuemin="0" aria-valuemax="100" style="width: 85%">You are almost landing at Emma's Planet
+			</div>
+		</div>
+			
+		<!--Sign Up Form -->
+		<form>
+		<!-- Panel -->
+		<div class="panel panel-info">
+		  <div class="panel-heading">
+		    <center><h3 class="panel-title">&lt;Emma's Planet&gt; Notice!</h3></center>
+		  </div>
+		  <div class="panel-body">
+		    <span class="glyphicon glyphicon-hand-right"></span> Welcome to Emma's Planet! If you want to know about Emma, you must sign up!
+		  </div>	      
+		</div>
+		  <!-- List Group -->
+		  <div class="list-group">
+			  <li class="list-group-item active">
+			    If you signed up...
+			  </li>
+			  <li class="list-group-item">You can get to know all about Emma.</li>
+			  <li class="list-group-item">You can see her portfolio.</li>
+			  <li class="list-group-item">You can contact with her.</li>
+			</div>
+
+			<!--ID-->
+			<div class="form-group">
+			  <label for="Id"><span class="glyphicon glyphicon-flag"></span> * ID</label>
+			  <input type="text" class="form-control" id="Id" placeholder="ID" required>
+			</div>
+			<!--User Name-->
+			<div class="form-group">
+			  <label for="Id"><span class="glyphicon glyphicon-user"></span> * User Name</label>
+			  <input type="text" class="form-control" id="username" placeholder="User Name" required>
+			</div>
+			<!--Password-->
+			<div class="form-group">
+			  <label for="Password"><span class="glyphicon glyphicon-lock"></span> * Password</label>
+			  <input type="password" class="form-control" id="Password" placeholder="Password" required>
+			</div>
+			<!-- Alert -->
+			<div class="alert alert-danger" role="alert">
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Alert:</span>
+				Password must be 6 characters, include upper or lowercase characters and at least 1 number.
+			</div>
+			<!--Email-->
+			<div class="form-group">
+			  <label for="Email"><span class="glyphicon glyphicon-envelope"></span> * Email</label>
+			  <input type="email" class="form-control" id="Email" placeholder="Email" required>
+			</div>	
+			<!--Birthday-->	
+			<div class="form-group">
+			  <label for="birthday"><span class="glyphicon glyphicon-apple"></span> Birthday</label>
+			  <input type="date" class="form-control" id="birthday" placeholder="Birthday">
+			</div>		
+			<!--Gender-->
+			<label for="gender"><span class="glyphicon glyphicon-ok-sign"></span> Gender</label>
+			<label class="radio-inline">
+			  <input type="radio" name="gender" id="gender1" value="female"> Female
+			</label>
+			<label class="radio-inline">
+			  <input type="radio" name="gender" id="gender2" value="male"> Male
+			</label>
+			<!--Interest--><br>			  
+			<label for="interest"><span class="glyphicon glyphicon-ok"></span> Interest</label>
+				<label class="checkbox-inline">
+				  <input type="checkbox" id="interest1" value="movies"> Movies
+				</label>
+				<label class="checkbox-inline">
+				  <input type="checkbox" id="interest2" value="music"> Music
+			    </label>
+				<label class="checkbox-inline">
+				  <input type="checkbox" id="interest3" value="sports"> Sports
+				</label>
+				<label class="checkbox-inline">
+				  <input type="checkbox" id="interest3" value="design"> Design
+				</label>
+				<label class="checkbox-inline">
+				  <input type="checkbox" id="interest3" value="cars"> Cars
+				</label>
+			<!--Country-->
+			<div class="form-group">
+				<label for="country"><span class="glyphicon glyphicon-globe"></span> Country</label>
+				  <select class="form-control" id="country">
+				    <option selected>Korea</option>
+				    <option>New Zealand</option>
+				    <option>China</option>
+				    <option>U.K</option>
+				  </select>
+			</div>
+			<!--SNS-->
+			<div class="form-group">
+				<label for="sns"><span class="glyphicon glyphicon-tag"></span> SNS</label>
+				<select class="form-control" id="sns" multiple>
+				  <option selected>Facebook</option>
+				  <option>Instagram</option>
+				  <option>Twitter</option>
+				  <option>Blog</option>
+				</select>
+			</div>
+			<!--URL-->
+			<div class="form-group">
+				<label for="basic-url"><span class="glyphicon glyphicon-link"></span> Your Homepage URL</label>
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon3">https://</span>
+					  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+					</div>
+			</div>
+			<!--Picture-->
+			<div class="form-group">
+			   <label for="File"><span class="glyphicon glyphicon-camera"></span> Profile Picture</label>
+			   <input type="file" id="File">
+			   <p class="help-block">Upload your profile picture.</p>
+			</div>
+			<div class="form-group bg-primary">
+				<!--Submit Button-->
+				<button type="reset" class="btn btn-default pull-right">Reset</button>
+				<button type="submit" class="btn btn-primary pull-right">Submit</button>
+			</div>		
+		</form>		
+	</div>
+</body>
+</html>
