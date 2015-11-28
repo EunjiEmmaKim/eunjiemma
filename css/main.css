@@ -1,0 +1,42 @@
+.main-contents1 {
+	margin-top: 30px;
+}
+
+.main-contents1 .column {
+	padding: 30px;
+}
+
+.main-contents1 .column .title {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.main-contents2 .column{
+	overflow: hidden;
+	max-width: 300px;
+	max-height:200px;
+}
+
+.main-contents2 img {
+  height: 200px;
+  width: 300px;
+ 
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+ 
+.main-contents2 img:hover {
+  width: 400px;
+  height: 270px;
+}
+
+/*
+.main-contents .column:hover {
+	cursor: pointer;
+	border: 1px solid #FF0000;
+	background-color: #cccccc;
+}
+*/
